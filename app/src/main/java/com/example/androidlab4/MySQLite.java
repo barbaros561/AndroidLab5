@@ -67,6 +67,11 @@ public class MySQLite extends SQLiteOpenHelper {
         );
         return zwierz;
     }
+    public Cursor lista(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("Select * from animals",null);
+    }
+
 
 
 
